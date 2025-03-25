@@ -1,9 +1,80 @@
-# OSAI-Demo
-![Python](https://img.shields.io/badge/python-3.9-blue)  
-![License](https://img.shields.io/badge/license-MIT-green)
+# vatrix
+![Python](https://img.shields.io/badge/python-3.9-blue)  ![License](https://img.shields.io/badge/license-MIT-green) [![Last Commit](https://img.shields.io/github/last-commit/brianbatesactual/vatrix)](https://github.com/brianbatesactual/vatrix) [![Stars](https://img.shields.io/github/stars/brianbatesactual/vatrix?style=social)](https://github.com/brianbatesactual/vatrix)
 
-Open source AI demo to showcase the deployment of an AI application stack on existing infrastructure. Initially designed to keep data on-prem.
 
-The first iteration of this project is the implementation of a natural language pipeline which can receive JSON events and then randomly select template variations to convert key value pairs into natural language sentences.
+# 🧠 Vatrix
 
-This repo may end up being the training data assitant, receiving JSON and writing data for a model to issue similarity scores. Not sure yet.
+**Vatrix** is an intelligent log processing and SBERT training tool. It converts structured logs into natural language events, useful for training sentence similarity models, SOC alert pipelines, and log summarization tools.
+
+---
+
+## 🚀 Features
+
+- 🏗️ Modular template system powered by Jinja2
+- 🧪 SBERT data generation and similarity scoring
+- 🌊 Supports file mode, stdin stream mode, and CLI flags
+- 📦 Exports training pairs to CSV
+- 🪵 Flexible and colorful logging with log rotation
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/brianbatesactual/vatrix.git
+cd vatrix
+make setup
+
+---
+
+## 🛠️ Usage
+
+vatrix --mode file \
+       --render-mode all \
+       --input data/input_logs.json \
+       --output data/processed_logs.csv \
+       --unmatched data/unmatched_logs.json \
+       --generate-sbert-data \
+       --log-level DEBUG \
+       --log-file logs/vatrix_debug.log
+
+Run with default file input:
+
+make run
+
+Stream logs from stdin:
+
+make stream
+
+Generate SBERT training pairs:
+
+make retrain
+
+---
+
+## 🧠 Example
+
+---
+
+## 🧪 Testing
+
+make test
+
+---
+
+## 📁 Logs
+
+All logs are saved to the logs/ directory with daily rotation.
+
+---
+
+## 🧼 Cleanup
+
+make clean    # Clean temp data
+make nuke     # Wipe and rebuild virtualenv
+
+---
+
+## 📚 License
+
+MIT © Brian Bates

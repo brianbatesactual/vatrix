@@ -3,6 +3,7 @@ name = "vatrix"
 version = "0.1.0"
 description = "SAP Log Processor & SBERT Training Tool"
 authors = [{ name="Brian Bates", email="brian_bates@me.com" }]
+license = { text = "MIT" }
 dependencies = [
     "beautifulsoup4==4.13.3",
     "certifi==2025.1.31",
