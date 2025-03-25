@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+.env
+.envrc
+.venv/
+env/
+build/
+dist/
+*.sqlite3
+
+# Jupyter/IPython
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Pytest
+.pytest_cache/
+
+# Log & output
+logs/
+data/*.csv
+data/*.json
+
+# Virtual environment lock
+poetry.lock

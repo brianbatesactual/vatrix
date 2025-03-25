@@ -24,11 +24,11 @@
 git clone https://github.com/brianbatesactual/vatrix.git
 cd vatrix
 make setup
-
+```
 ---
 
 ## 🛠️ Usage
-
+```bash
 vatrix --mode file \
        --render-mode all \
        --input data/input_logs.json \
@@ -37,19 +37,19 @@ vatrix --mode file \
        --generate-sbert-data \
        --log-level DEBUG \
        --log-file logs/vatrix_debug.log
-
+```
 Run with default file input:
-
+```bash
 make run
-
+```
 Stream logs from stdin:
-
+```bash
 make stream
-
+```
 Generate SBERT training pairs:
-
+```bash
 make retrain
-
+```
 ---
 
 ## 🧠 Example
@@ -57,9 +57,9 @@ make retrain
 ---
 
 ## 🧪 Testing
-
+```bash
 make test
-
+```
 ---
 
 ## 📁 Logs
@@ -69,10 +69,10 @@ All logs are saved to the logs/ directory with daily rotation.
 ---
 
 ## 🧼 Cleanup
-
+```bash
 make clean    # Clean temp data
 make nuke     # Wipe and rebuild virtualenv
-
+```
 ---
 
 ## 📚 License
