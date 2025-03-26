@@ -4,21 +4,28 @@
 
 # 🧠 Vatrix
 
-**Vatrix** is an intelligent log processing and SBERT training tool. It converts structured logs into natural language events, useful for training sentence similarity models, SOC alert pipelines, and log summarization tools.
+**Vatrix** is a command-line tool for processing SAP log data, rendering natural language descriptions using Jinja2 templates, injecting augmented data, and generating training pairs for fine-tuning Sentence Transformers (SBERT).
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- 🏗️ Modular template system powered by Jinja2
-- 🧪 SBERT data generation and similarity scoring
-- 🌊 Supports file mode, stdin stream mode, and CLI flags
-- 📦 Exports training pairs to CSV
-- 🪵 Flexible and colorful logging with log rotation
+- CLI-powered processing of SAP logs
+- Modular template system powered by Jinja2
+- SBERT data generation and similarity scoring
+- Supports file mode, stream mode, and CLI flags
+- Exports training pairs to CSV
+- Exports highly similar sentence pairs for SBERT fine-tuning
+- Flexible and colorful logging with log rotation
 
 ---
 
 ## 📦 Installation
+
+```bash
+pip install vatrix
+```
+Or install the latest from source:
 
 ```bash
 git clone https://github.com/brianbatesactual/vatrix.git
@@ -38,17 +45,15 @@ vatrix --mode file \
        --log-level DEBUG \
        --log-file logs/vatrix_debug.log
 ```
-Run with default file input:
+Makefile Commands
 ```bash
-make run
-```
-Stream logs from stdin:
-```bash
-make stream
-```
-Generate SBERT training pairs:
-```bash
-make retrain
+make setup         # Create venv and install dependencies
+make run           # Run log processor on default file
+make stream        # Start reading NDJSON from stdin
+make retrain       # Export SBERT sentence pairs
+make freeze        # Regenerate requirements.txt
+make clean         # Clean environment and build artifacts
+make nuke          # Full reset of the project environment
 ```
 ---
 
@@ -78,3 +83,5 @@ make nuke     # Wipe and rebuild virtualenv
 ## 📚 License
 
 MIT © Brian Bates
+
+Built with ❤️ for log intelligibility and NLP adventures.
