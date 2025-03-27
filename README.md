@@ -3,13 +3,13 @@
 
 # 🧠 Vatrix
 
-**Vatrix** is a command-line tool for processing SAP log data, rendering natural language descriptions using Jinja2 templates, injecting augmented data, and generating training pairs for fine-tuning Sentence Transformers (SBERT).
+**Vatrix** is a command-line tool for processing log data, rendering natural language descriptions using Jinja2 templates, injecting augmented data, and generating training pairs for fine-tuning Sentence Transformers (SBERT).
 
 ---
 
 ## ✨ Features
 
-- CLI-powered processing of SAP logs
+- CLI-powered processing of logs
 - Modular template system powered by Jinja2
 - SBERT data generation and similarity scoring
 - Supports file mode, stream mode, and CLI flags
