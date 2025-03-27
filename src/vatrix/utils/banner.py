@@ -22,5 +22,9 @@ V::::::V           V::::::VA:::::::A      T:::::TT:::::::TT:::::TRR:::::R     R:
            V:::VA:::::A                 A:::::A T:::::::::T      R::::::R     R:::::RI::::::::IX:::::X       X:::::X
             VVVAAAAAAA                   AAAAAAATTTTTTTTTTT      RRRRRRRR     RRRRRRRIIIIIIIIIIXXXXXXX       XXXXXXX
                                                                                                                     
+                           Log -> Map -> Augment -> Train -> Predict -> Evaluate -> Report
 
+               VATRIX - Enterprise Intelligence Platform for Natural Language Processing and LLM Fine-tuning.
+                                           Version 0.1.1 - alpha release
+                                   (c) 2025 brianbatesactual All rights reserved.
     """

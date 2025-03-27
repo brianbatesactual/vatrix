@@ -1,10 +1,11 @@
 # vatrix/utils/pathing.py
 
 import os
+import logging
+
 from pathlib import Path
 from datetime import datetime
 from appdirs import user_data_dir
-import logging
 
 logger = logging.getLogger(__name__)
 

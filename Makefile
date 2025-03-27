@@ -111,7 +111,7 @@ test-release:
 	@echo "🚀 Building distribution..."
 	python3 -m build
 	@echo "🔐 Uploading to TestPyPI..."
-	twine upload --repository testpypi dist/*
+	twine upload --repository testpypi dist/* --verbose
 	@echo "✅ Test release published to https://test.pypi.org/project/vatrix/"
 
 release:
@@ -120,7 +120,7 @@ release:
 	@echo "🚀 Building distribution..."
 	python3 -m build
 	@echo "🔐 Uploading to PyPI..."
-	twine upload dist/*
+	twine upload dist/* --verbose
 	@echo "✅ Release published to https://pypi.org/project/vatrix/"
 
 # ---------- Nuke 'em Rico ----------

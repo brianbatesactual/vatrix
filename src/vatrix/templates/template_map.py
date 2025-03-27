@@ -1,3 +1,4 @@
+# src/vatrix/templates/template_map.py
 
 TEMPLATE_MAP = {
     "Dialog Logon": "dialog_logon",

@@ -1,4 +1,4 @@
-# Builds the context dict from log fields
+# src/vatrix/pipeline/context_builder.py
 
 from collections import Counter
 

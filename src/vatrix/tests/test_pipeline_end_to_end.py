@@ -1,12 +1,13 @@
 # tests/test_pipeline_end_to_end.py
 
+import os
 import json
+
 from io import StringIO
 from unittest.mock import patch
 from vatrix.pipeline.stream_runner import process_stream
 from vatrix.outputs.rotating_writer import RotatingStreamWriter
 from vatrix.utils.pathing import get_output_path
-import os
 
 def test_end_to_end_stream():
     print("🚀 End-to-end stream test...")

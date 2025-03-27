@@ -1,17 +1,23 @@
-from jinja2 import Environment, FileSystemLoader
+# src/vatrix/templates/tmanager.py
+
 import os
 import random
 import logging
-from vatrix.utils.helpers import path_from_root
+
+from jinja2 import Environment, FileSystemLoader
+from importlib.resources import files
+from vatrix import templates
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
 class TManager:
     def __init__(self, template_dir=None):
         if template_dir is None:
-            template_dir = path_from_root("templates")
-        self.env = Environment(loader=FileSystemLoader(template_dir))
-        self.template_dir = template_dir
+            template_dir = files(templates).joinpath("").resolve()
+
+        self.template_dir = str(template_dir)
+        self.env = Environment(loader=FileSystemLoader(self.template_dir))
 
     def get_template_variations(self, template_name):
         template_path = os.path.join(self.template_dir, template_name)
@@ -28,10 +34,6 @@ class TManager:
         except Exception as e:
             logger.error(f"Unexpected error while getting variations for '{template_path}'.")
             return []
-
-        # if not os.path.exists(template_path):
-        #     raise FileNotFoundError(f"The directory '{template_name}' is not found.")
-        # return [f for f in os.listdir(template_path) if f.endswith('.j2')]
     
     def render_random_template(self, template_name, context):
         variations = self.get_template_variations(template_name)

@@ -1,7 +1,8 @@
 # Sets up logger and levels across all modules
 
-import logging
 import os
+import logging
+
 from datetime import datetime
 from logging.handlers import TimedRotatingFileHandler
 from colorlog import ColoredFormatter

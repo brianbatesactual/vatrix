@@ -1,11 +1,11 @@
-# 	vatrix/inputs/file_reader.py
+# vatrix/inputs/file_reader.py
 
 import os
 import json
 import logging
-from pathlib import Path
 import importlib.resources as pkg_resources
 
+from pathlib import Path
 from vatrix.utils.pathing import get_input_path
 
 logger = logging.getLogger(__name__)

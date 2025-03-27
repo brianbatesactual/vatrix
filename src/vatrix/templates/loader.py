@@ -1,6 +1,9 @@
-import json
+# src/vatrix/templates/loader.py
+
 import os
+import json
 import logging
+
 from vatrix.templates.template_map import TEMPLATE_MAP
 
 logger = logging.getLogger(__name__)

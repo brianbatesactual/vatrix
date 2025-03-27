@@ -1,6 +1,6 @@
 [project]
 name = "vatrix"
-version = "0.1.0"
+version = "0.1.1"
 description = "Log Processor & SBERT Training Tool"
 authors = [{ name="Brian Bates", email="brian_bates@me.com" }]
 license = { text = "MIT" }
@@ -70,6 +70,7 @@ include-package-data = true
 where = ["src"]
 
 [tool.setuptools.package-data]
+"vatrix.templates" = ["**/*.j2"]
 "vatrix.sample_logs" = ["input_logs.ndjson"]
 
 [project.scripts]

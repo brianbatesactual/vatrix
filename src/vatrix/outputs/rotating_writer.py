@@ -3,10 +3,10 @@
 import os
 import csv
 import time
-from pathlib import Path
-from datetime import datetime, timedelta
 import logging
 
+from pathlib import Path
+from datetime import datetime, timedelta
 from vatrix.utils.pathing import get_output_path
 
 logger = logging.getLogger(__name__)

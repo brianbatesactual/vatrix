@@ -1,8 +1,9 @@
 # tests/test_rotating_writer.py
 
-from vatrix.outputs.rotating_writer import RotatingStreamWriter
 import time
 import random
+
+from vatrix.outputs.rotating_writer import RotatingStreamWriter
 
 def simulate_stream_write(total_lines=1000, simulate_size_mb=False):
     writer = RotatingStreamWriter(

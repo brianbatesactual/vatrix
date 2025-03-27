@@ -1,6 +1,7 @@
+# src/vatrix/similarity.py
+
 from sentence_transformers import SentenceTransformer, util
 
-# Load SBERT once
 _model = SentenceTransformer('all-MiniLM-L6-v2')
 
 def get_similarity_score(sentence1, sentence2):

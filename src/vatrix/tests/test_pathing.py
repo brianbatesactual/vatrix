@@ -1,6 +1,7 @@
 # tests/test_pathing.py
 
 import re
+
 from vatrix.utils.pathing import get_output_path
 from appdirs import user_data_dir
 from pathlib import Path

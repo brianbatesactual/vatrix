@@ -1,8 +1,9 @@
-# Handles timestamped output and saving pairs
+# src/vatrix/outputs/sbert_writer.py
 
-import csv
 import os
+import csv
 import logging
+
 from datetime import datetime
 from vatrix.utils.pathing import get_output_path
 

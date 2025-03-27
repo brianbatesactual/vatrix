@@ -1,8 +1,9 @@
-# Wraps write_to_csv, write_to_json, etc.
+# src/vatrix/outputs/file_writer.py
 
-import json
-import csv
 import os
+import csv
+import json
+
 from vatrix.utils.pathing import get_output_path
 
 def read_json_file(file_path):

@@ -1,6 +1,7 @@
-# 	Main process_logs() logic
+# 	src/vatrix/pipeline/processor.py
 
 import logging
+
 from vatrix.templates.tmanager import TManager
 from vatrix.templates.loader import load_template_map
 from vatrix.pipeline.context_builder import build_context

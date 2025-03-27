@@ -1,26 +1,17 @@
 # src/main.py
-# CLI entrypoint, argument parsing, and orchestration only
 
 import logging
-# import argparse
+
 from vatrix.cli.args import parse_args
 from vatrix.utils.logger import setup_logger
+from vatrix.inputs import file_reader
 from vatrix.pipeline.processor import process_logs
 from vatrix.pipeline.stream_runner import process_stream
-from vatrix.inputs.file_reader import read_from_default_data, read_json_lines
-from vatrix.utils.pathing import get_output_path
 from vatrix.utils.banner import get_banner
 
-from vatrix.templates.tmanager import TManager
-from vatrix.utils.file_handler import write_to_csv, write_to_json
-from vatrix.inputs import file_reader
-from vatrix.inputs.stream_reader import read_from_stdin
-from vatrix.utils.exporter import export_sentence_pairs
-from sentence_transformers import SentenceTransformer, util
-from vatrix.utils.similarity import get_similarity_score
-
-
 def main():
+    print(get_banner())
+    
     args = parse_args()
 
     # logging init
@@ -80,5 +71,4 @@ def main():
         )
 
 if __name__ == "__main__":
-    print(get_banner())
     main()

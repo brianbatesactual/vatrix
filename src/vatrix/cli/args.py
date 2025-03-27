@@ -1,4 +1,4 @@
-# Handles all argparse config + default paths
+# src/vatrix/cli/args.py
 
 import argparse
 
