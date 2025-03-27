@@ -2,14 +2,14 @@ from jinja2 import Environment, FileSystemLoader
 import os
 import random
 import logging
+from vatrix.utils.helpers import path_from_root
 
 logger = logging.getLogger(__name__)
 
 class TManager:
     def __init__(self, template_dir=None):
         if template_dir is None:
-            script_dir = os.path.dirname(os.path.abspath(__file__))
-            template_dir = script_dir
+            template_dir = path_from_root("templates")
         self.env = Environment(loader=FileSystemLoader(template_dir))
         self.template_dir = template_dir
 

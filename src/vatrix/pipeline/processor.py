@@ -3,12 +3,11 @@
 import logging
 from vatrix.templates.tmanager import TManager
 from vatrix.templates.loader import load_template_map
-# from outputs.file_writer import write_to_csv, write_to_json
-from vatrix.utils.file_handler import write_to_csv, write_to_json
-# from outputs.sbert_writer import write_sbert_pairs
-# from pipeline.context_builder import build_context
-from vatrix.utils.exporter import export_sentence_pairs
+from vatrix.pipeline.context_builder import build_context
+from vatrix.outputs.file_writer import write_to_csv, write_to_json
+from vatrix.outputs.sbert_writer import export_sentence_pairs
 from vatrix.utils.similarity import get_similarity_score
+
 
 logger = logging.getLogger(__name__)
 
@@ -23,32 +22,9 @@ def process_logs(logs, output_csv, unmatched_json, render_mode='random', generat
     template_map = load_template_map()
     logger.debug(f"🧭 Template map loaded: {list(template_map.keys())}")
 
-
     for log_entry in logs:
-        # context = {key: log_entry.get(key, 'N/A') for key in [
-        #     'TXSUBCLSID', 'EVENT_TYPE', 'EVENT_SUBTYPE', 'CURRENT_TIMESTAMP', 'ALGSYSTEM',
-        #     'ALGINST', 'ALGCLIENT', 'ALGUSER', 'ALGLTERM', 'ALGTCODE',
-        #     'ALGREPNA', 'ALGAREA', 'ALGSUBID', 'TXSEVERITY', 'ALGTEXT',
-        #     'PARAM1', 'PARAM2', 'PARAM3', 'PARAM4', 'MSG'
-        # ]
+        context = build_context(log_entry)
 
-            # Phase 1, without loop
-        context = {
-            'ALGDATE': log_entry["ALGDATE"],
-            'ALGTIME': log_entry['ALGTIME'],
-            'ALGUSER': log_entry['ALGUSER'],
-            'ALGCLIENT': log_entry['ALGCLIENT'],
-            'ALGTEXT': log_entry['ALGTEXT'],
-            'PARAM1': log_entry.get('PARAM1', ''),
-            'PARAM2': log_entry.get('PARAM2', ''),
-            'PARAM3': log_entry.get('PARAM3', ''),
-            'PARAM4': log_entry.get('PARAM4', ''),
-            'ALGSYSTEM': log_entry['ALGSYSTEM'],
-
-            # Add other necessary fields
-        }
-
-    
         template_name = template_map.get(log_entry['TXSUBCLSID'], 'default_template.txt')
         
         if template_name == 'default_template.txt':
@@ -74,19 +50,15 @@ def process_logs(logs, output_csv, unmatched_json, render_mode='random', generat
                         sbert_pairs.append((base, variation, sim_score)) # all variations are highly similar
                 logger.info(f"📊 Generated {len(sbert_pairs)} SBERT training pairs")
 
-                # rendered_texts = template_manager.render_all_templates(template_name, context)
-                # for text in rendered_texts:
-                    # processed_logs.append({'log': text})
             else:
                 raise ValueError('Invalid render mode. Use "random" or "all".')
 
     if generate_sbert:
         export_sentence_pairs(sbert_pairs)
-        logger.info(f'📦 Exported {len(sbert_pairs)} SBERT training pairs to data/sbert_training_pairs.csv.')
+        logger.info(f'📦 Export complete for {len(sbert_pairs)} SBERT training pairs.')
 
     if processed_logs:
-        # fieldnames = ['log'] v1 legacy, delete?
-        write_to_csv(output_csv, processed_logs, fieldnames=['log'])
+        write_to_csv(file_path=output_csv, rows=processed_logs, fieldnames=['log'])
 
     if unmatched_logs:
-        write_to_json(unmatched_json, unmatched_logs)
+        write_to_json(file_path=unmatched_json, data=unmatched_logs)

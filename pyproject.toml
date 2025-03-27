@@ -5,14 +5,15 @@ description = "SAP Log Processor & SBERT Training Tool"
 authors = [{ name="Brian Bates", email="brian_bates@me.com" }]
 license = { text = "MIT" }
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.9,<3.10"
 classifiers = [
-    "license :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
 
 dependencies = [
+    "appdirs==1.4.4",
     "beautifulsoup4==4.13.3",
     "certifi==2025.1.31",
     "charset-normalizer==2.1.1",
@@ -63,6 +64,9 @@ include-package-data = true
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"vatrix.sample_logs" = ["input_logs.ndjson"]
 
 [project.scripts]
 vatrix = "vatrix.main:main"

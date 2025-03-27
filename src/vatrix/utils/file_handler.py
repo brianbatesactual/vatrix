@@ -1,4 +1,7 @@
 # src/utils/file_handler.py
+
+# deprecated
+
 import json
 import csv
 import os

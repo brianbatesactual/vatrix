@@ -1,6 +1,9 @@
+# vatrix/inputs/stream_reader.py
+
 import sys
 import json
 import logging
+
 logger = logging.getLogger(__name__)
 
 def read_from_stdin():
