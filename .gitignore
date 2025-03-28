@@ -30,3 +30,7 @@ data/*.json
 
 # Virtual environment lock
 poetry.lock
+
+# local dev certs
+cert.pem
+key.pem
