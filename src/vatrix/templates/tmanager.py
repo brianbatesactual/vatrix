@@ -4,7 +4,6 @@ import logging
 import os
 import random
 from importlib.resources import files
-from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 

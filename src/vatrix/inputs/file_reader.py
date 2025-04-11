@@ -4,9 +4,6 @@ import importlib.resources as pkg_resources
 import json
 import logging
 import os
-from pathlib import Path
-
-from vatrix.utils.pathing import get_input_path
 
 logger = logging.getLogger(__name__)
 

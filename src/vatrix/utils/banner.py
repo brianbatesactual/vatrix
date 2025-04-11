@@ -3,29 +3,22 @@
 
 def get_banner():
     return r"""
+                    ___                         ___                       ___
+      ___          /\  \                       /\  \                     /|  |
+     /\  \        /::\  \         ___         /::\  \       ___         |:|  |
+     \:\  \      /:/\:\  \       /\__\       /:/\:\__\     /\__\        |:|  |
+      \:\  \    /:/ /::\  \     /:/  /      /:/ /:/  /    /:/__/      __|:|__|
+  ___  \:\__\  /:/_/:/\:\__\   /:/__/      /:/_/:/__/___ /::\  \     /::::\__\_____
+ /\  \ |:|  |  \:\/:/  \/__/  /::\  \      \:\/:::::/  / \/\:\  \__  ~~~~\::::/___/
+ \:\  \|:|  |   \::/__/      /:/\:\  \      \::/~~/~~~~   ~~\:\/\__\     |:|~~|
+  \:\__|:|__|    \:\  \      \/__\:\  \      \:\~~\          \::/  /     |:|  |
+   \::::/__/      \:\__\          \:\__\      \:\__\         /:/  /      |:|__|
+    ~~~~           \/__/           \/__/       \/__/         \/__/       |/__/
 
-                                                                                                                    
-                                                                                                                    
-VVVVVVVV           VVVVVVVV   AAA         TTTTTTTTTTTTTTTTTTTTTTTRRRRRRRRRRRRRRRRR   IIIIIIIIIIXXXXXXX       XXXXXXX
-V::::::V           V::::::V  A:::A        T:::::::::::::::::::::TR::::::::::::::::R  I::::::::IX:::::X       X:::::X
-V::::::V           V::::::V A:::::A       T:::::::::::::::::::::TR::::::RRRRRR:::::R I::::::::IX:::::X       X:::::X
-V::::::V           V::::::VA:::::::A      T:::::TT:::::::TT:::::TRR:::::R     R:::::RII::::::IIX::::::X     X::::::X
- V:::::V           V:::::VA:::::::::A     TTTTTT  T:::::T  TTTTTT  R::::R     R:::::R  I::::I  XXX:::::X   X:::::XXX
-  V:::::V         V:::::VA:::::A:::::A            T:::::T          R::::R     R:::::R  I::::I     X:::::X X:::::X   
-   V:::::V       V:::::VA:::::A A:::::A           T:::::T          R::::RRRRRR:::::R   I::::I      X:::::X:::::X    
-    V:::::V     V:::::VA:::::A   A:::::A          T:::::T          R:::::::::::::RR    I::::I       X:::::::::X     
-     V:::::V   V:::::VA:::::A     A:::::A         T:::::T          R::::RRRRRR:::::R   I::::I       X:::::::::X     
-      V:::::V V:::::VA:::::AAAAAAAAA:::::A        T:::::T          R::::R     R:::::R  I::::I      X:::::X:::::X    
-       V:::::V:::::VA:::::::::::::::::::::A       T:::::T          R::::R     R:::::R  I::::I     X:::::X X:::::X   
-        V:::::::::VA:::::AAAAAAAAAAAAA:::::A      T:::::T          R::::R     R:::::R  I::::I  XXX:::::X   X:::::XXX
-         V:::::::VA:::::A             A:::::A   TT:::::::TT      RR:::::R     R:::::RII::::::IIX::::::X     X::::::X
-          V:::::VA:::::A               A:::::A  T:::::::::T      R::::::R     R:::::RI::::::::IX:::::X       X:::::X
-           V:::VA:::::A                 A:::::A T:::::::::T      R::::::R     R:::::RI::::::::IX:::::X       X:::::X
-            VVVAAAAAAA                   AAAAAAATTTTTTTTTTT      RRRRRRRR     RRRRRRRIIIIIIIIIIXXXXXXX       XXXXXXX
-                                                                                                                    
-                           Log -> Map -> Augment -> Train -> Predict -> Evaluate -> Report
 
-               VATRIX - Enterprise Intelligence Platform for Natural Language Processing and LLM Fine-tuning.
-                                           Version 0.2.0 - alpha release
-                                   (c) 2025 brianbatesactual All rights reserved.
+        Log -> Map -> Augment -> Train -> Predict -> Evaluate -> Report
+
+VATRIX - Enterprise Intelligence for Natural Language Processing and LLM Fine-tuning.
+                          Version 0.2.1 - alpha release
+                    (c) 2025 Brian Bates All rights reserved.
     """

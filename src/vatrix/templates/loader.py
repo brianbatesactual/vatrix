@@ -2,7 +2,6 @@
 
 import json
 import logging
-import os
 
 from vatrix.templates.template_map import TEMPLATE_MAP
 

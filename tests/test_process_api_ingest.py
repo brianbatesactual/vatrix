@@ -2,9 +2,9 @@
 # v2 testing program
 
 from datetime import datetime
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 
-import pytest
+import numpy as np
 
 from vatrix.pipeline.process_api_ingest import process_api_ingest
 
@@ -21,9 +21,13 @@ sample_log = {
 }
 
 
+@patch("vatrix.pipeline.process_api_ingest.EmbeddingPipeline.encode")
 @patch("vatrix.pipeline.process_api_ingest.send_to_gateway")
 @patch("vatrix.pipeline.process_api_ingest.stream_writer.write")
-def test_process_api_ingest_pipeline(mock_writer, mock_gateway):
+def test_process_api_ingest_pipeline(mock_writer, mock_gateway, mock_encode):
+    mock_encode.return_value = np.array([0.0] * 384)  # Cheap static vector
+    process_api_ingest(sample_log)
+
     # Setup mock for gateway
     mock_gateway.return_value = None
 

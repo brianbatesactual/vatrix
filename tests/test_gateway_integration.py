@@ -1,18 +1,12 @@
 # /src/vatrix/tests/test_gateway_integration.py
 # v2 testing program
 
-import os
 from datetime import datetime
 from uuid import uuid4
 
 import requests
 
-from vatrix.config.settings import (
-    DEBUG_MODE,
-    GATEWAY_INGEST_URL,
-    GATEWAY_VERIFY_TLS,
-    VATRIX_API_TOKEN,
-)
+from vatrix.config.settings import GATEWAY_INGEST_URL, GATEWAY_VERIFY_TLS, VATRIX_API_TOKEN
 from vatrix.pipeline.embedding_pipeline import EmbeddingPipeline
 
 

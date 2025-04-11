@@ -22,7 +22,7 @@ def build_context(log_entry, config=None):
     return context
 
 
-### Prototyping Area ###
+# Prototyping Area
 
 
 def infer_schema(logs, threshold=0.8):

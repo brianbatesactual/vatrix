@@ -1,17 +1,11 @@
 # outputs/gateway_writer.py
 import logging
-import os
 from datetime import datetime
 from typing import Dict, List
 
 import requests
 
-from vatrix.config.settings import (
-    DEBUG_MODE,
-    GATEWAY_INGEST_URL,
-    GATEWAY_VERIFY_TLS,
-    VATRIX_API_TOKEN,
-)
+from vatrix.config.settings import GATEWAY_INGEST_URL, GATEWAY_VERIFY_TLS, VATRIX_API_TOKEN
 
 AUTH_HEADER = {"Authorization": f"Bearer {VATRIX_API_TOKEN}"}
 

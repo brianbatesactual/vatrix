@@ -1,7 +1,6 @@
 # tests/test_rotating_writer.py
 # v1 testing program
 
-import random
 import time
 
 from vatrix.outputs.rotating_writer import RotatingStreamWriter

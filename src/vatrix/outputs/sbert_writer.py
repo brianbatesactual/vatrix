@@ -2,7 +2,6 @@
 
 import csv
 import logging
-import os
 from datetime import datetime
 
 from vatrix.utils.pathing import get_output_path

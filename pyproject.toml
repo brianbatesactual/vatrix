@@ -1,6 +1,6 @@
 [project]
 name = "vatrix"
-version = "0.2.0"
+version = "0.2.1"
 description = "NLP Processor & SBERT Training Tool"
 authors = [{ name="Brian Bates", email="brian_bates@me.com" }]
 license = { text = "MIT" }

@@ -68,16 +68,16 @@ similarity:
 
 # ---------- Testing Utilities ----------
 test:
-	pytest src/vatrix/tests/ -v
+	pytest tests/ -v
 
 test-paths:
-	python src/vatrix/tests/test_pathing.py
+	python tests/test_pathing.py
 
 test-stream:
-	python src/vatrix/tests/test_rotating_writer.py
+	python tests/test_rotating_writer.py
 
 test-e2e:
-	python src/vatrix/tests/test_pipeline_end_to_end.py
+	python tests/test_pipeline_end_to_end.py
 
 validate: test test-paths test-stream test-e2e
 	@echo "##### All tests passed. System validated! #####"

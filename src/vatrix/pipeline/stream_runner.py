@@ -72,11 +72,6 @@ from vatrix.pipeline.process_api_ingest import process_api_ingest
 #                 writer.write(rendered)
 #             rendered_count += 1
 #             logger.info(f"✅ Rendered log with template: {template_name}")
-
-#     logger.info(
-#         f"📝 Stream ended. {rendered_count} logs {'written to disk' if write_output else 'processed in memory'}."
-#     )
-
 #     if unmatched_logs and write_output:
 #         write_to_json(file_path=unmatched_json, data=unmatched_logs)
 #         logger.warning(f"⚠️ {len(unmatched_logs)} unmatched logs saved.")

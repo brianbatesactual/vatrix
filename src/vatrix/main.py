@@ -29,7 +29,9 @@ def main():
     logger.info("✅ Logging system initialized")
     logger.info("Starting vatrix pipeline...")
     logger.info(
-        f"Mode: {args.mode} | Render mode: {args.render_mode} | SBERT Data: {args.generate_sbert_data}"
+        f"Mode: {args.mode} | "
+        f"Render mode: {args.render_mode} | "
+        f"SBERT Data: {args.generate_sbert_data}"
     )
 
     # file mode
@@ -53,7 +55,7 @@ def main():
 
     # stream mode
     elif args.mode == "stream":
-        logger.info(f"🌊 Stream mode selected. Waiting for NSJSON from standard input.")
+        logger.info(f"🌊 {args.mode} mode selected. Waiting for NSJSON from standard input.")
         process_stream(
             unmatched_json=args.unmatched,
             render_mode=args.render_mode,
