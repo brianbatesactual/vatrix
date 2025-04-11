@@ -34,3 +34,14 @@ poetry.lock
 # local dev certs
 cert.pem
 key.pem
+
+# pre-commit and linting artifacts
+.mypy_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+.flake8
+
+# MkDocs build output
+site/

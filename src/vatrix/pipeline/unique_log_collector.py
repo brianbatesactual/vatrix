@@ -4,6 +4,7 @@ import hashlib
 import json
 import threading
 
+
 class UniqueLogCollector:
     def __init__(self):
         self._seen_hashes = set()
@@ -13,7 +14,7 @@ class UniqueLogCollector:
     def _hash_event(self, event: dict) -> str:
         # Create a stable hash from sorted JSON
         serialized = json.dumps(event, sort_keys=True)
-        return hashlib.sha256(serialized.encode('utf-8')).hexdigest()
+        return hashlib.sha256(serialized.encode("utf-8")).hexdigest()
 
     def add_if_unique(self, event: dict) -> bool:
         """
@@ -34,6 +35,6 @@ class UniqueLogCollector:
             return list(self._unique_logs)
 
     def export_to_jsonl(self, filepath):
-        with self._lock, open(filepath, 'w') as f:
+        with self._lock, open(filepath, "w") as f:
             for event in self._unique_logs:
-                f.write(json.dumps(event) + '\n')
+                f.write(json.dumps(event) + "\n")

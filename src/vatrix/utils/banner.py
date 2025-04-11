@@ -1,5 +1,6 @@
 # vatrix/utils/banner.py
 
+
 def get_banner():
     return r"""
 
@@ -25,6 +26,6 @@ V::::::V           V::::::VA:::::::A      T:::::TT:::::::TT:::::TRR:::::R     R:
                            Log -> Map -> Augment -> Train -> Predict -> Evaluate -> Report
 
                VATRIX - Enterprise Intelligence Platform for Natural Language Processing and LLM Fine-tuning.
-                                           Version 0.1.1 - alpha release
+                                           Version 0.2.0 - alpha release
                                    (c) 2025 brianbatesactual All rights reserved.
     """

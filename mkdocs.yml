@@ -1,0 +1,28 @@
+site_name: Vatrix Documentation
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Test Plan: test_plan.md
+  - Changelog: changelog.md
+  - Features:
+      - Embedding Pipeline: features/embedding.md
+      - Streaming Ingestion: features/stream_pipeline.md
+      - Deduplication: features/dedup.md
+      - File Writer: features/file_writer.md
+      - Rotating Writer: features/rotating_writer.md
+      - SBERT Writer: features/sbert_writer.md
+      - File Reader: features/file_reader.md
+      - Stream Reader: features/stream_reader.md
+      - Context Builder: features/context_builder.md
+      - Processor: features/processor.md
+      - Stream Runner: features/stream_runner.md
+      - Template Loader: features/loader.md
+      - Template Manager: features/tmanager.md
+  - Example: example.md
+
+repo_url: https://github.com/brianbatesactual/vatrix
+repo_name: vatrix
+edit_uri: ""

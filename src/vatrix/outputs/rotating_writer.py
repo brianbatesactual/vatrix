@@ -1,15 +1,16 @@
 # vatrix/outputs/rotating_writer.py
 
-import os
 import csv
-import time
 import logging
-
-from pathlib import Path
+import os
+import time
 from datetime import datetime, timedelta
+from pathlib import Path
+
 from vatrix.utils.pathing import get_output_path
 
 logger = logging.getLogger(__name__)
+
 
 class RotatingStreamWriter:
     def __init__(self, subdir="stream_output", max_days=7, max_total_gb=20, max_file_mb=1024):
@@ -20,7 +21,7 @@ class RotatingStreamWriter:
         self.current_path = None
         self.current_file = None
         self.csv_writer = None
-        self.fieldnames = ['log']
+        self.fieldnames = ["log"]
         self.last_rotation = None
 
     def _rotate_if_needed(self):
@@ -42,10 +43,10 @@ class RotatingStreamWriter:
                 filename="streamed_logs.csv",
                 timestamp=True,
                 subdir=self.subdir,
-                use_cwd=False
+                use_cwd=False,
             )
 
-            self.current_file = open(self.current_path, 'w', newline='', encoding='utf-8')
+            self.current_file = open(self.current_path, "w", newline="", encoding="utf-8")
             self.csv_writer = csv.DictWriter(self.current_file, fieldnames=self.fieldnames)
             self.csv_writer.writeheader()
             self.last_rotation = now
@@ -76,5 +77,5 @@ class RotatingStreamWriter:
 
     def write(self, sentence):
         self._rotate_if_needed()
-        self.csv_writer.writerow({'log': sentence})
+        self.csv_writer.writerow({"log": sentence})
         self.current_file.flush()
