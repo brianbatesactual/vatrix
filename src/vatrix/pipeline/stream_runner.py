@@ -14,6 +14,24 @@ logger = logging.getLogger(__name__)
 
 stream_writer = RotatingStreamWriter()
 
+def process_api_ingest(log_entry: dict, render_mode='random', write_output=True, writer=None):
+    template_manager = TManager()
+    template_map = load_template_map()
+    writer = writer or stream_writer
+
+    logger.debug(f"📥 Received API event: {json.dumps(log_entry)}")
+    context = build_context(log_entry)
+
+    template_name = template_map.get(log_entry.get('TXSUBCLSID'), 'default_template.txt')
+    if template_name == 'default_template.txt':
+        logger.warning(f"TXSUBCLSID '{log_entry.get('TXSUBCLSID')}' not found. Using default template.")
+        write_to_json(data=[log_entry])  # Write unmatched
+    else:
+        rendered = template_manager.render_random_template(template_name, context)
+        if write_output:
+            writer.write(rendered)
+        logger.info(f"✅ Rendered API event with template: {template_name}")
+                    
 def process_stream(unmatched_json=None, render_mode='random', write_output=True, writer=None):
     template_manager = TManager()
     template_map = load_template_map()
