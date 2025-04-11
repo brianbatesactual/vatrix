@@ -3,19 +3,26 @@
 
 # 🧠 Vatrix
 
-**Vatrix** is a command-line tool for processing log data, rendering natural language descriptions using Jinja2 templates, injecting augmented data, and generating training pairs for fine-tuning Sentence Transformers (SBERT).
+**Vatrix** is a NLP log processor, rendering natural language descriptions from machine data, and serves several use cases:
+- streaming NLP & vector embedding
+- batch NDJSON file processing 
+- augmented data injection 
+- generating training pairs for fine-tuning Sentence Transformers (SBERT)
 
 ---
 
 ## ✨ Features
 
-- CLI-powered processing of logs
+- CLI-powered NDJSON log processing
 - Modular template system powered by Jinja2
 - SBERT data generation and similarity scoring
 - Supports file mode, stream mode, and CLI flags
 - Exports training pairs to CSV
 - Exports highly similar sentence pairs for SBERT fine-tuning
 - Flexible and colorful logging with log rotation
+- Direct integration with Qdrant vector database (OSAI-Demo Stack)
+- Unit & integration testing
+- 
 
 ---
 

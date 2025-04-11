@@ -2,7 +2,7 @@
 VENV_DIR := env
 PYTHON := $(VENV_DIR)/bin/python
 PIP := $(VENV_DIR)/bin/pip
-LOG_LEVEL ?= INFO
+LOG_LEVEL ?= DEBUG
 LOG_FILE ?=
 RENDER_MODE ?= random
 INPUT ?= sample_logs/input_logs.ndjson
@@ -104,6 +104,31 @@ clean:
 	rm -rf env data/*.csv data/*.json __pycache__ src/**/__pycache__ .pytest_cache
 	rm -rf *.egg-info build dist
 
+install-dev:
+	pip install -r requirements.txt
+	pip install -r requirements-dev.txt
+
+# ---------- Lint/Format Utilities ----------
+
+format:
+	black src/ tests/
+	isort src/ tests/
+
+lint:
+	flake8 src/ tests/
+
+# Run formatters, linters, and pre-commit
+check:
+	@echo "🧹 Formatting with black + isort..."
+	black src/ tests/
+	isort src/ tests/
+
+	@echo "🔍 Running flake8 lint..."
+	flake8 src/ tests/
+
+	@echo "✅ Running pre-commit hooks..."
+	pre-commit run --all-files
+
 # ---------- Build Utilities ----------
 test-release:
 	@echo "🧹 Cleaning old distributions..."
@@ -135,6 +160,10 @@ nuke:
 		python3 -m venv env; \
 		env/bin/pip install --upgrade pip; \
 		env/bin/pip install -r requirements.txt; \
+		if [ -f requirements-dev.txt ]; then \
+			echo "➕ Installing dev requirements..."; \
+			env/bin/pip install -r requirements-dev.txt; \
+		fi; \
 		echo "✅ Reset complete. Fresh environment is ready to use."; \
 	else \
 		echo "🚫 Cancelled."; \

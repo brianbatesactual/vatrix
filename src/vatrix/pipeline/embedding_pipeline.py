@@ -1,5 +1,6 @@
-from sentence_transformers import SentenceTransformer
 import numpy as np
+from sentence_transformers import SentenceTransformer
+
 
 class EmbeddingPipeline:
     def __init__(self, model_name="all-MiniLM-L6-v2"):

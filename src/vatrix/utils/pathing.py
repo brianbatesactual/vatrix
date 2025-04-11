@@ -1,19 +1,21 @@
 # vatrix/utils/pathing.py
 
-import os
 import logging
-
-from pathlib import Path
+import os
 from datetime import datetime
+from pathlib import Path
+
 from appdirs import user_data_dir
 
 logger = logging.getLogger(__name__)
 
 APP_NAME = "vatrix"
 
+
 def ensure_dir(path: Path):
     path.parent.mkdir(parents=True, exist_ok=True)
     return path
+
 
 def get_input_path(filename: str, subdir: str = "inputs") -> Path:
     """
@@ -31,7 +33,7 @@ def get_input_path(filename: str, subdir: str = "inputs") -> Path:
     if fallback_path.exists():
         logger.debug(f"📂 Resolved input path: {fallback_path}")
         return fallback_path
-    
+
     logger.warning(f"⚠️ Input file not found: {filename}")
     return fallback_path
 
@@ -41,7 +43,7 @@ def get_output_path(
     use_cwd: bool = False,
     subdir: str = "outputs",
     timestamp: bool = False,
-    ext: str = None
+    ext: str = None,
 ) -> Path:
     """
     Resolves a safe output path for generated files.
@@ -54,7 +56,7 @@ def get_output_path(
     :return: A resolved and writable Path
     """
     base = Path.cwd() if use_cwd else Path(user_data_dir(APP_NAME))
-    
+
     if timestamp:
         name, suffix = os.path.splitext(filename)
         timestamp_str = datetime.now().strftime("%Y%m%d_%H%M%S")

@@ -2,7 +2,8 @@
 
 from sentence_transformers import SentenceTransformer, util
 
-_model = SentenceTransformer('all-MiniLM-L6-v2')
+_model = SentenceTransformer("all-MiniLM-L6-v2")
+
 
 def get_similarity_score(sentence1, sentence2):
     embeddings = _model.encode([sentence1, sentence2], convert_to_tensor=True)

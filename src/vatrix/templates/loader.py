@@ -1,18 +1,19 @@
 # src/vatrix/templates/loader.py
 
-import os
 import json
 import logging
+import os
 
 from vatrix.templates.template_map import TEMPLATE_MAP
 
 logger = logging.getLogger(__name__)
 
+
 def load_template_map(override_path=None):
     if override_path:
         logger.info(f"📄 Attempting to load template map from: {override_path}")
         try:
-            with open(override_path, 'r') as f:
+            with open(override_path, "r") as f:
                 loaded = json.load(f)
                 logger.info(f"📄 Loading custom template map from: {override_path}")
                 return json.load(f)

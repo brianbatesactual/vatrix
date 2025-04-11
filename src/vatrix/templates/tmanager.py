@@ -1,15 +1,17 @@
 # src/vatrix/templates/tmanager.py
 
+import logging
 import os
 import random
-import logging
-
-from jinja2 import Environment, FileSystemLoader
 from importlib.resources import files
-from vatrix import templates
 from pathlib import Path
 
+from jinja2 import Environment, FileSystemLoader
+
+from vatrix import templates
+
 logger = logging.getLogger(__name__)
+
 
 class TManager:
     def __init__(self, template_dir=None):
@@ -22,7 +24,7 @@ class TManager:
     def get_template_variations(self, template_name):
         template_path = os.path.join(self.template_dir, template_name)
         try:
-            variations = [f for f in os.listdir(template_path) if f.endswith('.j2')]
+            variations = [f for f in os.listdir(template_path) if f.endswith(".j2")]
             if not variations:
                 logger.warning(f"No template variations found in '{template_name}'.")
             else:
@@ -34,13 +36,13 @@ class TManager:
         except Exception as e:
             logger.error(f"Unexpected error while getting variations for '{template_path}'.")
             return []
-    
+
     def render_random_template(self, template_name, context):
         variations = self.get_template_variations(template_name)
         if not variations:
             logger.warning(f"No template variations found in '{template_name}'.")
             return ""
-        
+
         selected_template = random.choice(variations)
         logger.debug(f"Selected template: {selected_template} for template {template_name}.")
 
@@ -52,7 +54,7 @@ class TManager:
         except Exception as e:
             logger.error(f"Error rendering random template for {template_name}.")
             return ""
-    
+
     def render_all_templates(self, template_name, context):
         variations = self.get_template_variations(template_name)
         rendered_outputs = []
@@ -65,7 +67,9 @@ class TManager:
             except Exception as e:
                 logger.error(f"Error rendering template {template_file} for {template_name}: {e}")
 
-        logger.info(f"Rendered {len(rendered_outputs)} of {len(variations)} templates for {template_name}.")
+        logger.info(
+            f"Rendered {len(rendered_outputs)} of {len(variations)} templates for {template_name}."
+        )
         return rendered_outputs
 
     def render_template(self, template_name, context):

@@ -1,13 +1,16 @@
 # vatrix/api/receiver.py
 
-from fastapi import FastAPI, Request, HTTPException, status
-from fastapi.responses import JSONResponse
-from vatrix.pipeline.stream_runner import process_api_ingest
-from datetime import datetime
 import os
+from datetime import datetime
+
+from fastapi import FastAPI, HTTPException, Request, status
+from fastapi.responses import JSONResponse
+
+from vatrix.pipeline.stream_runner import process_api_ingest
 
 API_TOKEN = os.getenv("VATRIX_API_TOKEN", "changeme")  # Set this in env
 app = FastAPI()
+
 
 @app.post("/ingest/splunk")
 async def ingest_event(request: Request):
@@ -25,7 +28,7 @@ async def ingest_event(request: Request):
             "index": payload.get("index", "unspecified"),
             "sourcetype": payload.get("sourcetype", "unspecified"),
             "source": "vatrix:api:ingest:splunk",
-            **event
+            **event,
         }
 
         process_api_ingest(row)

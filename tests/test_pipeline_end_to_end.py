@@ -1,13 +1,15 @@
 # tests/test_pipeline_end_to_end.py
+# v1 testing program
 
-import os
 import json
-
+import os
 from io import StringIO
 from unittest.mock import patch
-from vatrix.pipeline.stream_runner import process_stream
+
 from vatrix.outputs.rotating_writer import RotatingStreamWriter
+from vatrix.pipeline.stream_runner import process_stream
 from vatrix.utils.pathing import get_output_path
+
 
 def test_end_to_end_stream():
     print("🚀 End-to-end stream test...")
@@ -22,7 +24,7 @@ def test_end_to_end_stream():
             "ALGTEXT": "Login failed",
             "PARAM1": "192.168.0.1",
             "PARAM2": "admin",
-            "ALGSYSTEM": "auth"
+            "ALGSYSTEM": "auth",
         },
         {
             "TXSUBCLSID": "UNKNOWN_TX",
@@ -33,8 +35,8 @@ def test_end_to_end_stream():
             "ALGTEXT": "Unmatched event",
             "PARAM1": "unknown",
             "PARAM2": "N/A",
-            "ALGSYSTEM": "misc"
-        }
+            "ALGSYSTEM": "misc",
+        },
     ]
 
     # Mock read_from_stdin to simulate live input
@@ -48,6 +50,7 @@ def test_end_to_end_stream():
     assert any("streamed_logs" in f.name for f in files), "No streamed logs written."
 
     print("✅ End-to-end stream test passed.")
+
 
 if __name__ == "__main__":
     test_end_to_end_stream()

@@ -1,7 +1,7 @@
 [project]
 name = "vatrix"
-version = "0.1.1"
-description = "Log Processor & SBERT Training Tool"
+version = "0.2.0"
+description = "NLP Processor & SBERT Training Tool"
 authors = [{ name="Brian Bates", email="brian_bates@me.com" }]
 license = { text = "MIT" }
 readme = { file = "README.md", content-type = "text/markdown" }
@@ -73,6 +73,19 @@ where = ["src"]
 [tool.setuptools.package-data]
 "vatrix.templates" = ["**/*.j2"]
 "vatrix.sample_logs" = ["input_logs.ndjson"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-v"
+testpaths = ["src/vatrix/tests"]
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+line_length = 100
 
 [project.scripts]
 vatrix = "vatrix.main:main"
