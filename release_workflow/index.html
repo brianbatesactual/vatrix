@@ -22,6 +22,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -49,7 +52,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -100,6 +110,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -815,10 +851,10 @@
 <p>This checklist outlines the full process for developing a new feature and publishing it to PyPI from a protected <code>main</code> branch using GitHub, <code>make</code>, and <code>twine</code>.</p>
 <hr />
 <h2 id="1-create-feature-branch">✅ 1. Create Feature Branch</h2>
-<pre><code class="language-bash">git checkout main
-git pull origin main
-git checkout -b feature/&lt;short-description&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/&lt;short-description&gt;
+</code></pre></div>
 <hr />
 <h2 id="2-develop-the-feature">✍️ 2. Develop the Feature</h2>
 <ul>
@@ -829,25 +865,25 @@ git checkout -b feature/&lt;short-description&gt;
 </ul>
 <hr />
 <h2 id="3-format-lint-test">🧪 3. Format, Lint, Test</h2>
-<pre><code class="language-bash">make format     # black + isort
-make lint       # flake8
-make check      # pre-commit + lint + format
-make test       # pytest
-</code></pre>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>format<span class="w">     </span><span class="c1"># black + isort</span>
+make<span class="w"> </span>lint<span class="w">       </span><span class="c1"># flake8</span>
+make<span class="w"> </span>check<span class="w">      </span><span class="c1"># pre-commit + lint + format</span>
+make<span class="w"> </span><span class="nb">test</span><span class="w">       </span><span class="c1"># pytest</span>
+</code></pre></div>
 <hr />
 <h2 id="4-build-upload-to-testpypi">📦 4. Build &amp; Upload to TestPyPI</h2>
-<pre><code class="language-bash">make freeze          # update requirements.txt
-make test-release    # build and upload to TestPyPI
-</code></pre>
-<p>Install test release:</p>
-<pre><code class="language-bash">pip install --index-url https://test.pypi.org/simple vatrix
-</code></pre>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>freeze<span class="w">          </span><span class="c1"># update requirements.txt</span>
+make<span class="w"> </span>test-release<span class="w">    </span><span class="c1"># build and upload to TestPyPI</span>
+</code></pre></div>
+<p>Install test release:
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://test.pypi.org/simple<span class="w"> </span>vatrix
+</code></pre></div></p>
 <hr />
 <h2 id="5-commit-changes">📥 5. Commit Changes</h2>
-<pre><code class="language-bash">git add .
-git commit -m &quot;✨ Add &lt;feature&gt;: &lt;summary&gt;&quot;
-git push origin feature/&lt;short-description&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;✨ Add &lt;feature&gt;: &lt;summary&gt;&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>feature/&lt;short-description&gt;
+</code></pre></div>
 <hr />
 <h2 id="6-create-pull-request">🚀 6. Create Pull Request</h2>
 <ul>
@@ -864,22 +900,22 @@ git push origin feature/&lt;short-description&gt;
 <li>Squash and merge via GitHub UI</li>
 <li>Pull latest <code>main</code>:</li>
 </ul>
-<pre><code class="language-bash">git checkout main
-git pull origin main
-</code></pre>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
 <hr />
 <h2 id="8-tag-the-release">🏷️ 8. Tag the Release</h2>
-<pre><code class="language-bash">git tag -a vX.Y.Z -m &quot;Release vX.Y.Z: &lt;highlights&gt;&quot;
-git push origin vX.Y.Z
-</code></pre>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>vX.Y.Z<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Release vX.Y.Z: &lt;highlights&gt;&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>vX.Y.Z
+</code></pre></div>
 <hr />
 <h2 id="9-publish-to-pypi">📦 9. Publish to PyPI</h2>
-<pre><code class="language-bash">make release
-</code></pre>
-<p>Or manually:</p>
-<pre><code class="language-bash">python3 -m build
-twine upload dist/*
-</code></pre>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>release
+</code></pre></div>
+<p>Or manually:
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>build
+twine<span class="w"> </span>upload<span class="w"> </span>dist/*
+</code></pre></div></p>
 <hr />
 <h2 id="10-update-github-release-notes">📑 10. Update GitHub Release Notes</h2>
 <ul>
