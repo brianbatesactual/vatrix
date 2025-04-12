@@ -1,0 +1,1206 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../features/tmanager/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Example - Vatrix Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Vatrix Documentation" class="md-header__button md-logo" aria-label="Vatrix Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vatrix Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Example
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/brianbatesactual/vatrix" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    vatrix
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Vatrix Documentation" class="md-nav__button md-logo" aria-label="Vatrix Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Vatrix Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/brianbatesactual/vatrix" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    vatrix
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test_plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Plan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/embedding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Embedding Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/stream_pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Streaming Ingestion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/dedup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deduplication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/file_writer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Writer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/rotating_writer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rotating Writer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/sbert_writer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SBERT Writer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/file_reader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Reader
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/stream_reader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stream Reader
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/context_builder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Context Builder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/processor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Processor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/stream_runner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stream Runner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/loader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template Loader
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/tmanager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template Manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Example
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Example</h1>
+
+<p>[INFO] 2025-04-10 22:15:26,745 - <strong>main</strong> - ✅ Logging system initialized</p>
+<p>[INFO] 2025-04-10 22:15:26,745 - <strong>main</strong> - Starting vatrix pipeline...</p>
+<p>[INFO] 2025-04-10 22:15:26,745 - <strong>main</strong> - Mode: stream | Render mode: random | SBERT Data: False</p>
+<p>[INFO] 2025-04-10 22:15:26,746 - <strong>main</strong> - 🌊 Stream mode selected. Waiting for NSJSON from standard input.</p>
+<p>[INFO] 2025-04-10 22:15:26,746 - vatrix.inputs.stream_reader - Listening for NDJSON input (Ctrl+D to end)...</p>
+<p>{"EVENT_TYPE":"SM20","EVENT_SUBTYPE":"","CURRENT_TIMESTAMP":20250320015236,"UTCDIFF":"110000","UTCSIGN":"+","ALGSYSTEM":"w16s24id8606","ALGINST":"w16s24id8606_ID8_00","ALGDATE":"20250320","ALGTIME":"125232","ALGCLIENT":"800","ALGUSER":"DDIC","ALGLTERM":"","ALGTCODE":"","ALGREPNA":"RSBTCRTE","ALGAREA":"AU","ALGSUBID":"1","TXSUBCLSID":"Dialog Logon","TXSEVERITY":"Medium","ALGTEXT":"Logon successful (type=B, method=A)","ALGFILENO":"000001","ALGFILEPOS":"0000000000","ALGTASKTYPE":"B","ALGTASKNO":"021","PARAM1":"B","PARAM2":"0","PARAM3":"A","PARAM4":"","IPADDRESS":"","MSG":"AU1"}</p>
+<p>[DEBUG] 2025-04-10 22:15:32,929 - vatrix.inputs.stream_reader - 📥 Received line: {"EVENT_TYPE":"SM20","EVENT_SUBTYPE":"","CURRENT_TIMESTAMP":20250320015236,"UTCDIFF":"110000","UTCSIGN":"+","ALGSYSTEM":"w16s24id8606","ALGINST":"w16s24id8606_ID8_00","ALGDATE":"20250320","ALGTIME":"125232","ALGCLIENT":"800","ALGUSER":"DDIC","ALGLTERM":"","ALGTCODE":"","ALGREPNA":"RSBTCRTE","ALGAREA":"AU","ALGSUBID":"1","TXSUBCLSID":"Dialog Logon","TXSEVERITY":"Medium","ALGTEXT":"Logon successful (type=B, method=A)","ALGFILENO":"000001","ALGFILEPOS":"0000000000","ALGTASKTYPE":"B","ALGTASKNO":"021","PARAM1":"B","PARAM2":"0","PARAM3":"A","PARAM4":"","IPADDRESS":"","MSG":"AU1"}</p>
+<p>[DEBUG] 2025-04-10 22:15:32,930 - vatrix.pipeline.process_api_ingest - 📥 Ingesting log from API: {'EVENT_TYPE': 'SM20', 'EVENT_SUBTYPE': '', 'CURRENT_TIMESTAMP': 20250320015236, 'UTCDIFF': '110000', 'UTCSIGN': '+', 'ALGSYSTEM': 'w16s24id8606', 'ALGINST': 'w16s24id8606_ID8_00', 'ALGDATE': '20250320', 'ALGTIME': '125232', 'ALGCLIENT': '800', 'ALGUSER': 'DDIC', 'ALGLTERM': '', 'ALGTCODE': '', 'ALGREPNA': 'RSBTCRTE', 'ALGAREA': 'AU', 'ALGSUBID': '1', 'TXSUBCLSID': 'Dialog Logon', 'TXSEVERITY': 'Medium', 'ALGTEXT': 'Logon successful (type=B, method=A)', 'ALGFILENO': '000001', 'ALGFILEPOS': '0000000000', 'ALGTASKTYPE': 'B', 'ALGTASKNO': '021', 'PARAM1': 'B', 'PARAM2': '0', 'PARAM3': 'A', 'PARAM4': '', 'IPADDRESS': '', 'MSG': 'AU1'}</p>
+<p>[DEBUG] 2025-04-10 22:15:32,931 - vatrix.templates.tmanager - Found 6 variations for 'dialog_logon'.</p>
+<p>[DEBUG] 2025-04-10 22:15:32,931 - vatrix.templates.tmanager - Selected template: variation_2.j2 for template dialog_logon.</p>
+<p>[DEBUG] 2025-04-10 22:15:32,936 - vatrix.templates.tmanager - Successfully rendered random template for dialog_logon.</p>
+<p>[DEBUG] 2025-04-10 22:15:32,936 - vatrix.utils.pathing - 🧭 Resolved path: /Users/brianbates/Library/Application Support/vatrix/stream_output/streamed_logs_20250410_221532.csv</p>
+<p>[INFO] 2025-04-10 22:15:32,937 - vatrix.outputs.rotating_writer - 🔄 Started new stream file: /Users/brianbates/Library/Application Support/vatrix/stream_output/streamed_logs_20250410_221532.csv</p>
+<p>Batches: 100%|████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00,  9.13it/s]</p>
+<p>🔎 EMBEDDING: 'User DDIC from client 800 accessed the system w16s24id8606 on 20250320 at 125232 using type B and method A.'\n→ Vector: [-0.05574979  0.05328215 -0.05681858 -0.13123487 -0.06642933]...</p>
+<p>[DEBUG] 2025-04-10 22:15:33,082 - root - 📦 Sending payload:
+{
+  "project": "vatrix-stream",
+  "entries": [
+    {
+      "id": "0f2b0e8c-e476-404b-9964-5a6733c53b79",
+      "vector": [
+        -0.055749792605638504,
+        0.053282152861356735,
+        -0.056818582117557526,
+        -0.13123486936092377,
+        -0.06642933189868927,
+        -0.020217884331941605,
+        0.07537119090557098,
+        0.04252663254737854,
+        -0.06298499554395676,
+        -0.03873942792415619,
+        0.06659043580293655,
+        0.04859456792473793,
+        0.012481068260967731,
+        -0.029508749023079872,
+        -0.058731965720653534,
+        0.055047858506441116,
+        0.013061732053756714,
+        -0.11084553599357605,
+        0.04349225386977196,
+        0.019679220393300056,
+        0.0025609666481614113,
+        -0.04141716659069061,
+        -0.1400139480829239,
+        -0.010614595375955105,
+        -0.0307141225785017,
+        -0.028384745121002197,
+        0.06260095536708832,
+        -0.030169636011123657,
+        0.02876264788210392,
+        0.042964231222867966,
+        0.0194547101855278,
+        0.08966385573148727,
+        -0.04588107392191887,
+        -0.03702923282980919,
+        0.07867889106273651,
+        -0.018774518743157387,
+        0.05136509984731674,
+        0.08196515589952469,
+        0.02847518026828766,
+        -0.03808655962347984,
+        0.02413291484117508,
+        -0.015671834349632263,
+        0.04707584157586098,
+        0.14430223405361176,
+        0.0317060612142086,
+        0.04743126779794693,
+        -0.035621050745248795,
+        0.027472980320453644,
+        0.03512992337346077,
+        -0.012651708908379078,
+        0.008347867988049984,
+        0.09371603280305862,
+        0.028419775888323784,
+        0.029708942398428917,
+        -0.020575618371367455,
+        -0.0676814466714859,
+        0.05342801287770271,
+        0.11588184535503387,
+        0.013595420867204666,
+        0.06452994793653488,
+        -0.07569180428981781,
+        0.0014044976560398936,
+        0.003474382683634758,
+        -0.004088456742465496,
+        -0.019910382106900215,
+        0.04654195159673691,
+        0.012003508396446705,
+        -0.13121657073497772,
+        0.012175198644399643,
+        -0.07591515779495239,
+        -0.03413970395922661,
+        0.03037836216390133,
+        -0.009604278020560741,
+        -0.004774826113134623,
+        0.015076970681548119,
+        0.05145895853638649,
+        -0.06935656815767288,
+        0.037198133766651154,
+        0.06941456347703934,
+        -0.10388674587011337,
+        0.040525831282138824,
+        -0.0034599199425429106,
+        0.024182235822081566,
+        0.03078940324485302,
+        0.009626796469092369,
+        0.052131976932287216,
+        -0.036903683096170425,
+        -0.04429227486252785,
+        0.059061866253614426,
+        0.03063930757343769,
+        0.0464736707508564,
+        -0.03950302302837372,
+        -0.046324923634529114,
+        -0.013162979856133461,
+        -0.023002881556749344,
+        -0.011466140858829021,
+        0.04466080293059349,
+        -0.0441763736307621,
+        -0.02345661260187626,
+        0.0709039568901062,
+        -0.056484781205654144,
+        0.03440527990460396,
+        -0.04162890091538429,
+        0.02633729577064514,
+        -0.015660643577575684,
+        -0.044407784938812256,
+        0.06409617513418198,
+        0.03712552785873413,
+        0.04652056470513344,
+        0.010324815288186073,
+        0.007041683420538902,
+        0.009243495762348175,
+        -0.02172432839870453,
+        0.027986271306872368,
+        0.10372769087553024,
+        -0.09093806147575378,
+        -0.02153691276907921,
+        0.04642988368868828,
+        -0.08894072473049164,
+        -0.07682041078805923,
+        -0.018135719001293182,
+        -0.016564136371016502,
+        -0.019617395475506783,
+        -0.05736841633915901,
+        -0.06189946085214615,
+        -0.012093446217477322,
+        0.07716091722249985,
+        4.619845245655212e-33,
+        0.025212055072188377,
+        0.02688095159828663,
+        -0.004043465480208397,
+        -0.031058385968208313,
+        -0.00966139230877161,
+        0.005169371608644724,
+        0.08407232910394669,
+        0.0004042307264171541,
+        -0.037004001438617706,
+        0.00030957721173763275,
+        -0.10442160815000534,
+        -0.04262347146868706,
+        0.014993874356150627,
+        -0.027548128738999367,
+        0.018230309709906578,
+        0.02066648192703724,
+        0.09006601572036743,
+        0.03111836314201355,
+        -0.03109193593263626,
+        0.08888303488492966,
+        0.08603300154209137,
+        0.04502689465880394,
+        0.06866208463907242,
+        -0.033134907484054565,
+        0.052211616188287735,
+        0.07392096519470215,
+        0.006306312046945095,
+        0.009050735272467136,
+        0.09916737675666809,
+        0.018982641398906708,
+        0.040449708700180054,
+        -0.03900047391653061,
+        -0.035343147814273834,
+        0.017605844885110855,
+        -0.02163814567029476,
+        -0.03494297340512276,
+        0.059419743716716766,
+        -0.058543477207422256,
+        0.019334854558110237,
+        -0.07727353274822235,
+        0.015822572633624077,
+        -0.006794595159590244,
+        -0.01124620158225298,
+        -0.028991585597395897,
+        -0.03022667206823826,
+        -0.07447987794876099,
+        -0.03704649955034256,
+        0.048521388322114944,
+        0.004923101048916578,
+        0.060513898730278015,
+        -0.0894753560423851,
+        0.0427870973944664,
+        -0.013570249080657959,
+        0.009472469799220562,
+        -0.011069273576140404,
+        -0.06362350285053253,
+        0.04112747684121132,
+        0.033598050475120544,
+        0.020159868523478508,
+        0.05040189251303673,
+        0.08098950237035751,
+        0.10074939578771591,
+        -0.0005689592217095196,
+        -0.07256241887807846,
+        -0.032808754593133926,
+        -0.12027330696582794,
+        -0.023717733100056648,
+        -0.11057187616825104,
+        -0.03808126971125603,
+        -0.022693702951073647,
+        0.013489841483533382,
+        0.049223240464925766,
+        0.07400966435670853,
+        0.02535758726298809,
+        -0.09337439388036728,
+        -0.004485988989472389,
+        -0.06319986283779144,
+        0.03854542598128319,
+        -0.041256580501794815,
+        0.014880779199302197,
+        -0.00018976058345288038,
+        0.0265631303191185,
+        0.041907716542482376,
+        0.03867628797888756,
+        -0.06990937143564224,
+        0.04382118955254555,
+        -0.07367391139268875,
+        0.012083145789802074,
+        -0.028370792046189308,
+        0.03887287899851799,
+        -0.018815331161022186,
+        0.008600786328315735,
+        -0.013029438443481922,
+        0.1017090231180191,
+        0.017845235764980316,
+        -5.008635594085868e-33,
+        -0.11429564654827118,
+        -0.006864016875624657,
+        -0.0015994750428944826,
+        -0.1295185387134552,
+        -0.007020297925919294,
+        -0.08059062063694,
+        -0.04181993007659912,
+        -0.013302470557391644,
+        -0.004549083765596151,
+        0.0690036416053772,
+        0.07441414147615433,
+        -0.024909608066082,
+        -0.0323164239525795,
+        0.002657625824213028,
+        0.035845622420310974,
+        -0.03639434278011322,
+        -0.05058174952864647,
+        0.05777941271662712,
+        -0.04431036487221718,
+        0.01499983947724104,
+        -0.012550083920359612,
+        0.14810167253017426,
+        0.012011651881039143,
+        -0.02723454311490059,
+        -0.0003898989234585315,
+        0.02172192744910717,
+        0.019493229687213898,
+        0.10531260818243027,
+        -0.015999531373381615,
+        -0.03820975124835968,
+        0.0017976685194298625,
+        0.013965010643005371,
+        0.03970317915081978,
+        -0.03082040511071682,
+        0.037418726831674576,
+        -0.013302424922585487,
+        0.04399727284908295,
+        0.011640997603535652,
+        -0.024297747761011124,
+        -0.00932398159056902,
+        0.03061518445611,
+        0.04587135091423988,
+        -0.029013115912675858,
+        0.020886532962322235,
+        0.03467167913913727,
+        0.018648270517587662,
+        -0.02638840302824974,
+        -0.013916422612965107,
+        0.05404161661863327,
+        -0.004556360188871622,
+        0.021894847974181175,
+        -0.038349684327840805,
+        0.07795613259077072,
+        0.0789993554353714,
+        0.027509376406669617,
+        0.04238751903176308,
+        0.08607877790927887,
+        -0.01613251119852066,
+        0.025520525872707367,
+        -0.08324573934078217,
+        0.041738200932741165,
+        -0.09985525906085968,
+        -0.022757630795240402,
+        0.08464539051055908,
+        0.016882045194506645,
+        0.027544531971216202,
+        0.003713753540068865,
+        -0.047943178564310074,
+        -0.019614888355135918,
+        -0.029642751440405846,
+        -0.049789559096097946,
+        -0.0225756224244833,
+        0.01747213862836361,
+        0.0274796299636364,
+        0.05695079639554024,
+        -0.10824975371360779,
+        -0.09609396010637283,
+        -0.03894186392426491,
+        0.007115274202078581,
+        -0.04507558420300484,
+        -0.01148183736950159,
+        0.013423867523670197,
+        -0.03994345664978027,
+        -0.03514786809682846,
+        -0.06859394162893295,
+        -0.0545562244951725,
+        0.04366369917988777,
+        0.0011081203119829297,
+        -0.052291445434093475,
+        -0.045702576637268066,
+        -0.07225844264030457,
+        -0.03674504533410072,
+        -0.0798490047454834,
+        0.011889835819602013,
+        -0.00014786497922614217,
+        -2.919775710097383e-08,
+        -0.019043918699026108,
+        0.0014727809466421604,
+        0.04564376175403595,
+        0.06490062177181244,
+        -0.009885464794933796,
+        0.0393158383667469,
+        -0.06662701815366745,
+        -0.020246345549821854,
+        0.015815140679478645,
+        -0.0372057743370533,
+        -0.0239003486931324,
+        -0.0088865477591753,
+        0.012623298913240433,
+        -0.03797265514731407,
+        0.09593214094638824,
+        -0.05268911272287369,
+        -0.0011973861837759614,
+        -0.08139532804489136,
+        -0.06433430314064026,
+        -0.05659390985965729,
+        0.06824424117803574,
+        -0.08297855406999588,
+        0.05603663995862007,
+        -0.03433921933174133,
+        -0.03799809142947197,
+        0.013204345479607582,
+        -0.021515680477023125,
+        0.09143536537885666,
+        -0.026613298803567886,
+        -0.012686643749475479,
+        -0.04764655977487564,
+        0.04926016181707382,
+        -0.03058766759932041,
+        0.00835398305207491,
+        -0.05073218420147896,
+        0.10490252822637558,
+        -0.006719304248690605,
+        0.05413663387298584,
+        0.05142853036522865,
+        0.02257711999118328,
+        -0.021061131730675697,
+        -0.03160938248038292,
+        -0.06280534714460373,
+        0.04510219022631645,
+        0.12348347157239914,
+        0.015549984760582447,
+        -0.03188040852546692,
+        0.01911940984427929,
+        0.016986656934022903,
+        -0.018432874232530594,
+        -0.07355225831270218,
+        -0.03071683645248413,
+        0.033738285303115845,
+        0.07607080787420273,
+        -0.06642372906208038,
+        -0.04579846188426018,
+        -0.07621727883815765,
+        -0.07383507490158081,
+        0.009219489991664886,
+        0.10628370940685272,
+        -0.019184133037924767,
+        0.08121610432863235,
+        -0.021770715713500977,
+        -0.025693288072943687
+      ],
+      "payload": {
+        "EVENT_TYPE": "SM20",
+        "EVENT_SUBTYPE": "",
+        "CURRENT_TIMESTAMP": "20250320015236",
+        "UTCDIFF": "110000",
+        "UTCSIGN": "+",
+        "ALGSYSTEM": "w16s24id8606",
+        "ALGINST": "w16s24id8606_ID8_00",
+        "ALGDATE": "20250320",
+        "ALGTIME": "125232",
+        "ALGCLIENT": "800",
+        "ALGUSER": "DDIC",
+        "ALGLTERM": "",
+        "ALGTCODE": "",
+        "ALGREPNA": "RSBTCRTE",
+        "ALGAREA": "AU",
+        "ALGSUBID": "1",
+        "TXSUBCLSID": "Dialog Logon",
+        "TXSEVERITY": "Medium",
+        "ALGTEXT": "Logon successful (type=B, method=A)",
+        "ALGFILENO": "000001",
+        "ALGFILEPOS": "0000000000",
+        "ALGTASKTYPE": "B",
+        "ALGTASKNO": "021",
+        "PARAM1": "B",
+        "PARAM2": "0",
+        "PARAM3": "A",
+        "PARAM4": "",
+        "IPADDRESS": "",
+        "MSG": "AU1",
+        "rendered": "User DDIC from client 800 accessed the system w16s24id8606 on 20250320 at 125232 using type B and method A.",
+        "template": "dialog_logon"
+      },
+      "timestamp": "2025-04-11T05:15:33.081942"
+    }
+  ]
+}</p>
+<p>[DEBUG] 2025-04-10 22:15:33,105 - urllib3.connectionpool - Starting new HTTPS connection (1): 10.0.1.159:443</p>
+<p>[DEBUG] 2025-04-10 22:15:33,270 - urllib3.connectionpool - https://10.0.1.159:443 "POST /api/v1/ingest HTTP/1.1" 200 54</p>
+<p>[INFO] 2025-04-10 22:15:33,271 - root - ✅ Successfully shipped 1 vectors to Vatrix-Gateway.</p>
+<p>[INFO] 2025-04-10 22:15:33,274 - vatrix.pipeline.process_api_ingest - ✅ Ingest complete: dialog_logon</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
