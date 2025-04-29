@@ -102,7 +102,7 @@ tomli==2.2.1
 torch==2.2.2
 torchvision==0.17.2
 tqdm==4.67.1
-transformers==4.30.2
+transformers==4.50.0
 twine==5.0.0
 typing-inspection==0.4.0
 typing_extensions==4.12.2
